@@ -1,5 +1,5 @@
 # Asp.netCore9WebAPI-InventoryProAPI-CleanArchitecture-Jwt-Angular19
-I am adding Two Branches 1 Main, 2 InventoryProAPI, 3 Angular
+I am adding Three Branches 1 Main, 2 InventoryProAPI, 3 Angular
 
 <img width="1920" height="1080" alt="Screenshot (208)" src="https://github.com/user-attachments/assets/8d0a1add-3a93-456e-9cdf-7d57aedcb2a7" />
 <img width="1920" height="1080" alt="Screenshot (209)" src="https://github.com/user-attachments/assets/2c385dbc-34ba-4cbc-b0a3-54a6f02d8c1d" />
