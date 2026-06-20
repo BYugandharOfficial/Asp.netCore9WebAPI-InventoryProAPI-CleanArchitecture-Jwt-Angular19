@@ -20,7 +20,7 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 // Configure the database connection
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("InventoryProAPI") ?? throw new InvalidOperationException("Connection string 'InventoryProAPI' not found.")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("******") ?? throw new InvalidOperationException("Connection string '******' not found.")));
 
 
 // Dependency Injection for repositories and services
