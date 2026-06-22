@@ -1,0 +1,104 @@
+/* Layout Wrapper */
+.app-container {
+  display: flex;
+  min-height: calc(100vh - 100px); /* full height minus header+footer */
+}
+
+/* Header */
+.app-header {
+  height: 60px;
+  background: #8e38f0;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.app-header .logo {
+  font-weight: bold;
+}
+.app-header .nav-links a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+.app-header .nav-links a.active {
+  text-decoration: underline;
+}
+
+/* Sidebar */
+.app-sidebar {
+  width: 220px;
+  background: #212529;
+  color: white;
+ padding: 20px 10px;
+}
+.app-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.app-sidebar li {
+  margin: 10px 0;
+}
+.app-sidebar a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 8px;
+  border-radius: 4px;
+}
+.app-sidebar a.active,
+.app-sidebar a:hover {
+  background: #6b737b;
+}
+
+/* Content */
+.app-content {
+  flex-grow: 1;
+  background: #f8f9fa;
+  padding: 20px;
+}
+
+/* Footer */
+.app-footer {
+  height: 40px;
+  background: #343a40;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout {
+   background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 14px;   /* smaller */
+    font-size: 14px;     /* smaller text */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logout:hover {
+    background: #bb2d3b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+.logout i {
+    margin-right: 8px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-name {
+    color: white;
+    font-weight: 600;
+}

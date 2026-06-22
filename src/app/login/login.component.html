@@ -1,0 +1,48 @@
+
+<div class="Login">
+<div class="login-container">
+  <h2>InventoryPro</h2>
+  <h4>Login</h4>
+
+  <form (ngSubmit)="login()">
+    <div>
+      <label>📧 Email</label>
+      <input
+        type="username"
+        [(ngModel)]="username"
+        name="username"
+        placeholder="Enter Email"
+        required>
+    </div>
+
+    <div>
+      <label>🔒 Password</label>
+      <input
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        placeholder="Enter Password"
+        required>
+    </div>
+
+    <button type="submit">Login</button>
+    <br>
+    <div class="form-check d-flex align-items-center mt-3">
+    <input
+        class="form-check-input me-2"
+        type="checkbox"
+        id="rememberMe">
+
+    <label
+        class="form-check-label"
+        for="rememberMe">
+        Remember Me
+    </label>
+</div>
+<div class="text-center mt-3">
+    <span>Don't have an account? </span>
+    <a routerLink="/register">Create New Account</a>
+</div>
+  </form>
+</div>
+</div>

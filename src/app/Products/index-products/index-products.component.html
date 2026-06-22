@@ -1,0 +1,102 @@
+
+<div class="container mt-3">
+  <h2></h2>
+  <button class="btn btn-primary mb-3" (click)="openModal()">✚ Add Product</button>
+
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ProductId</th>
+        <th>Name</th>
+      <th>Category</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Unit</th>
+      <th>Descripton</th>
+      <th>IsActive</th>
+      <th>CreatedDate</th>
+      <th>ModifiedDate</th>
+      <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of products">
+      <td>{{ p.productId}}</td>
+      <td>{{ p.productName }}</td>
+      <td>{{ p.categoryId }}</td>
+      <td>{{ p.quantity }}</td>
+      <td>{{ p.price }}</td>
+      <td>{{ p.unit }}</td>
+      <td>{{ p.description }}</td>
+      <td>{{ p.isActive}}</td>
+      <td>{{p.createdDate}}</td>
+      <td>{{p.modifiedDate}}</td>
+     <td>
+       <button class="btn btn-warning btn-sm me-1" (click)="openModal(p)">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteProduct(p.productId)">Delete</button>
+     </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form (ngSubmit)="saveProduct()" #form="ngForm">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ isEditing ? 'Edit Product' : 'Add Product' }}</h5>
+          <button type="button" class="btn-close" (click)="closeModal()"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label>ProductName</label>
+            <input type="text" class="form-control" [(ngModel)]="productForm.productName" name="productname" required />
+          </div>
+          <div class="mb-3">
+            <label>CategoryId</label>
+            <input type="text" class="form-control" [(ngModel)]="productForm.categoryId" name="categoryId" />
+          </div>
+          <div class="mb-3">
+            <label>Quantity</label>
+            <input type="text" class="form-control" [(ngModel)]="productForm.quantity" name="quantity" />
+          </div>
+          <div class="mb-3">
+            <label>Price</label>
+            <input type="text" class="form-control" [(ngModel)]="productForm.price" name="price" />
+          </div>
+          <div class="mb-3">
+            <label>Unit</label>
+            <input type="text" class="form-control" [(ngModel)]="productForm.unit" name="unit" />
+          </div>
+          <div class="mb-3">
+            <label>Description</label>
+            <input type="text" class="form-control" [(ngModel)]="productForm.description" name="description" />
+          </div>
+          <div class="mb-3">
+            <label>
+              <input type="checkbox" [(ngModel)]="productForm.isActive" name="isActive" /> Active
+            </label>
+          </div>
+          <div class="mb-3">
+            <label>createdAt</label>
+            <input type="text" class="form-control" [(ngModel)]="productForm.createdDate" name="createdDate" />
+          </div>
+          <div class="mb-3">
+            <label>modifiedAt</label>
+            <input type="text" class="form-control" [(ngModel)]="productForm.modifiedDate" name="modifiedDate" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success" type="submit" [disabled]="form.invalid">
+            {{ isEditing ? 'Update' : 'Save' }}
+          </button>
+          <button type="button" class="btn btn-secondary" (click)="closeModal()">Cancel</button>
+</div>
+      </form>
+    </div>
+  </div>
+</div>
