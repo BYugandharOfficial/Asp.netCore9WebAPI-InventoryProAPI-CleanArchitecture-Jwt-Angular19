@@ -1,0 +1,90 @@
+<div class="container mt-3">
+  <h2></h2>
+  <button class="btn btn-primary mb-3" (click)="openModal()">✚ Add Sale</button>
+
+  
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>SaleId</th>
+        <th>SaleNumber</th>
+        <th>CustomerId</th>
+        <th>SaleDate</th>
+        <th>TotalAmount</th>
+        <th>Active</th>
+        <th>CreatedDate</th>
+        <th>UpdatedDate</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of sales">
+        <td>{{ c.saleId }}</td>
+        <td>{{ c.saleNumber }}</td>
+        <td>{{ c.customerId }}</td>
+        <td>{{ c.saleDate }}</td>
+        <td>{{ c.totalAmount }}</td>
+        <td>{{ c.isActive ? 'Yes' : 'No' }}</td>
+        <td>{{ c.createdDate | date }}</td>
+        <td>{{ c.updatedDate | date }}</td>
+        <td>
+          <button class="btn btn-warning btn-sm me-1" (click)="openModal(c)">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="deletesale(c.saleId)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+</table>
+</div>
+
+
+<div class="modal fade" id="saleModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form (ngSubmit)="saveSale()" #form="ngForm">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ isEditing ? 'Edit Sale' : 'Add Sale' }}</h5>
+          <button type="button" class="btn-close" (click)="closeModal()"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label>SaleNumber</label>
+            <input type="text" class="form-control" [(ngModel)]="saleForm.saleNumber" name="saleNumber" required />
+          </div>
+          <div class="mb-3">
+            <label>CustomerId</label>
+            <input type="text" class="form-control" [(ngModel)]="saleForm.customerId" name="customerId" required />
+          </div>
+          <div class="mb-3">
+            <label>SaleDate</label>
+            <input type="text" class="form-control" [(ngModel)]="saleForm.saleDate" name="saleDate" required />
+          </div>
+          <div class="mb-3">
+            <label>TotalAmount</label>
+            <input type="text" class="form-control" [(ngModel)]="saleForm.totalAmount" name="totalAmount" required />
+          </div>
+          
+          <div class="mb-3">
+            <label>
+              <input type="checkbox" [(ngModel)]="saleForm.isActive" name="isActive" /> Active
+            </label>
+          </div>
+          <div class="mb-3">
+            <label>createdAt</label>
+            <input type="text" class="form-control" [(ngModel)]="saleForm.createdDate" name="CreatedDate" />
+          </div>
+          <div class="mb-3">
+            <label>updatedAt</label>
+            <input type="text" class="form-control" [(ngModel)]="saleForm.updatedDate" name="CreatedDate" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success" type="submit" [disabled]="form.invalid">
+            {{ isEditing ? 'Update' : 'Save' }}
+          </button>
+          <button type="button" class="btn btn-secondary" (click)="closeModal()">Cancel</button>
+</div>
+      </form>
+    </div>
+  </div>
+</div>
+

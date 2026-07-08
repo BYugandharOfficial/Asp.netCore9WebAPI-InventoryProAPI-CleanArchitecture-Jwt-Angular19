@@ -1,0 +1,39 @@
+
+<!-- Header -->
+<header class="app-header" height="40px">
+  
+  <div class="logo" height="39px" align="center" >🏠 InventoryPro</div>
+  <nav class="nav-links">
+    <span class="user-name">👤 {{ userName }}</span>
+    <button class="logout" (click)="logout()">Logout</button>
+  </nav>
+</header>
+
+<div class="app-container">
+  <!-- Sidebar -->
+  <aside class="app-sidebar">
+    <ul>
+      <li><a routerLink="/Dashboard" routerLinkActive="active">📊 Dashboard</a></li>
+      <li><a routerLink="api/Product" routerLinkActive="active">🛒 Products</a></li>
+      <li><a routerLink="api/Category" routerLinkActive="active">📂 Categories</a></li>
+      <li><a routerLink="api/Supplier" routerLinkActive="active">🚚 Suppliers</a></li>
+      <li><a routerLink="api/Customer" routerLinkActive="active">👥 Customers</a></li>
+     <li><a routerLink="api/Sale" routerLinkActive="active">💰 Sales</a></li>
+     <li><a routerLink="api/Reports" routerLinkActive="active">📈 Reports</a></li>
+
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="app-content">
+    <router-outlet></router-outlet>
+    
+  </main>
+</div>
+ 
+<!-- Footer -->
+
+<footer class="app-footer">
+  <p>&copy; {{ currentDateTime | date: 'dd-MMM-yyyy hh:mm:ss a' }} InventoryPro v1.0</p>
+</footer>
+

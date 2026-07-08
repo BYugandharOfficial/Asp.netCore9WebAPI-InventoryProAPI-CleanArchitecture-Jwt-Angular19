@@ -1,0 +1,80 @@
+.dashboard-grid {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    width: 294px;
+    height: 99px;
+    border-radius: 10px;
+    padding: 13px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,.2);
+    transform: translateY(-3px);
+}
+
+.products {
+    background: #5c7dae;
+}
+
+.categories {
+    background: #198754;
+}
+
+.suppliers {
+    background: #d8257f;
+}
+
+.customers{
+    background: #edc672;
+}
+
+.card h4 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.card span {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.chart-card {
+    border: none;
+    border-radius: 15px;
+    height: 360px;
+    width: 600px;
+}
+
+.chart-card .card-header {
+    font-size: 20px;
+    font-weight: 600;
+    background: #fff;
+}
+
+.chart-card .card-body {
+    height: 300px;
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.Category Wise Products{
+    height: auto;
+    background: #000000c5;
+}
+
+#pieChart {
+    width: 100% !important;
+    height: 100% !important;
+}

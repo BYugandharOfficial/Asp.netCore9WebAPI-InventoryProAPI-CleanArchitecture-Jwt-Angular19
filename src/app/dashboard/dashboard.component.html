@@ -1,0 +1,65 @@
+
+
+<span style="color: rgb(63, 142, 196);">Welcome back ! </span>
+<div class="dashboard-grid">
+
+  <div class="card products">
+    <h4>📦 Products</h4>
+    <span>{{ totalProducts }}</span>
+  </div>
+
+  <div class="card categories">
+    <h4>📂 Categories</h4>
+    <span>{{ totalCategories }}</span>
+  </div>
+
+  <div class="card suppliers">
+    <h4>🚚 Suppliers</h4>
+    <span>{{ totalSuppliers }}</span>
+  </div>
+
+  <div class="card customers">
+    <h4>👥 Customers</h4>
+    <span>{{ totalCustomers }}</span>
+  </div>
+</div>
+
+
+
+
+  <!-- Charts -->
+<div class="container-fluid mt-4">
+  <div class="row">
+
+    <!-- Pie Chart -->
+    <div class="col-lg-6 col-md-6 mb-4">
+      <div class="card shadow chart-card">
+        <div class="card-header">
+          <h5 class="mb-0 text-primary">🥧 Category Wise Products</h5>
+        </div>
+
+        <div class="card-body">
+          <div class="chart-container">
+            <canvas id="pieChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Line Chart -->
+    <div class="col-lg-6 col-md-6 mb-4">
+      <div class="card shadow chart-card">
+        <div class="card-header">
+          <h5 class="mb-0 text-primary">📈 Monthly Sales</h5>
+        </div>
+
+        <div class="card-body">
+          <div class="chart-container">
+            <canvas id="salesLineChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

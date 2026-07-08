@@ -1,0 +1,88 @@
+<div class="container mt-3">
+  <h2></h2>
+  <button class="btn btn-primary mb-3" (click)="openModal()">✚ Add Customer</button>
+
+  
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>CustomerId</th>
+        <th>CustomerName</th>
+        <th>PhoneNumber</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Active</th>
+        <th>CreatedDate</th>
+        <th>UpdatedDate</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of customers">
+        <td>{{ c.customerId }}</td>
+        <td>{{ c.customerName }}</td>
+        <td>{{ c.phoneNumber }}</td>
+        <td>{{ c.email }}</td>
+        <td>{{ c.address }}</td>
+        <td>{{ c.isActive ? 'Yes' : 'No' }}</td>
+        <td>{{ c.createdDate | date }}</td>
+        <td>{{ c.updatedDate | date }}</td>
+        <td>
+          <button class="btn btn-warning btn-sm me-1" (click)="openModal(c)">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteCustomer(c.customerId)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+</table>
+</div>
+
+
+<div class="modal fade" id="customerModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form (ngSubmit)="saveCustomer()" #form="ngForm">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ isEditing ? 'Edit Customer' : 'Add Customer' }}</h5>
+          <button type="button" class="btn-close" (click)="closeModal()"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label>CustomerName</label>
+            <input type="text" class="form-control" [(ngModel)]="customerForm.customerName" name="customerName" required />
+          </div>
+          <div class="mb-3">
+            <label>PhoneNumber</label>
+            <input type="text" class="form-control" [(ngModel)]="customerForm.phoneNumber" name="phoneNumber" required />
+          </div>
+          <div class="mb-3">
+            <label>Email</label>
+            <input type="text" class="form-control" [(ngModel)]="customerForm.email" name="Email" required />
+          </div>
+          <div class="mb-3">
+            <label>Address</label>
+            <input type="text" class="form-control" [(ngModel)]="customerForm.address" name="Address" />
+          </div>
+          <div class="mb-3">
+            <label>
+              <input type="checkbox" [(ngModel)]="customerForm.isActive" name="isActive" /> Active
+            </label>
+          </div>
+          <div class="mb-3">
+            <label>createdAt</label>
+            <input type="text" class="form-control" [(ngModel)]="customerForm.createdDate" name="CreatedDate" />
+          </div>
+          <div class="mb-3">
+            <label>updatedAt</label>
+            <input type="text" class="form-control" [(ngModel)]="customerForm.updatedDate" name="CreatedDate" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success" type="submit" [disabled]="form.invalid">
+            {{ isEditing ? 'Update' : 'Save' }}
+          </button>
+          <button type="button" class="btn btn-secondary" (click)="closeModal()">Cancel</button>
+</div>
+      </form>
+    </div>
+  </div>
+</div>
