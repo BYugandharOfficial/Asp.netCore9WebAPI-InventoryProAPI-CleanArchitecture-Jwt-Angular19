@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37314.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryProAPI.Application", "InventoryProAPI.Application\InventoryProAPI.Application.csproj", "{10A31B0C-548E-410A-88DB-6F343FB7E600}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryProAPI.Domain", "InventoryProAPI.Domain\InventoryProAPI.Domain.csproj", "{2DEBE471-24C6-45AD-B620-C03FE766BF2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryProAPI.Infrastructure", "InventoryProAPI.Infrastructure\InventoryProAPI.Infrastructure.csproj", "{CF97B3A8-2546-4356-A6E6-EDA608E98F06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryProAPI.WebAPI", "InventoryProAPI.API\InventoryProAPI.WebAPI.csproj", "{EA33C80F-E4EE-41C8-AA88-8119DED81C08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryProAPI.Persistence", "InventoryProAPI.Persistence\InventoryProAPI.Persistence.csproj", "{81834C3F-8F28-4657-A853-2B7DB65AF05E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10A31B0C-548E-410A-88DB-6F343FB7E600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10A31B0C-548E-410A-88DB-6F343FB7E600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10A31B0C-548E-410A-88DB-6F343FB7E600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10A31B0C-548E-410A-88DB-6F343FB7E600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DEBE471-24C6-45AD-B620-C03FE766BF2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DEBE471-24C6-45AD-B620-C03FE766BF2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DEBE471-24C6-45AD-B620-C03FE766BF2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DEBE471-24C6-45AD-B620-C03FE766BF2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF97B3A8-2546-4356-A6E6-EDA608E98F06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF97B3A8-2546-4356-A6E6-EDA608E98F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF97B3A8-2546-4356-A6E6-EDA608E98F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF97B3A8-2546-4356-A6E6-EDA608E98F06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA33C80F-E4EE-41C8-AA88-8119DED81C08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA33C80F-E4EE-41C8-AA88-8119DED81C08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA33C80F-E4EE-41C8-AA88-8119DED81C08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA33C80F-E4EE-41C8-AA88-8119DED81C08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81834C3F-8F28-4657-A853-2B7DB65AF05E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81834C3F-8F28-4657-A853-2B7DB65AF05E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81834C3F-8F28-4657-A853-2B7DB65AF05E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81834C3F-8F28-4657-A853-2B7DB65AF05E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6149AC03-BBCF-42C5-B748-778C84390612}
+	EndGlobalSection
+EndGlobal
